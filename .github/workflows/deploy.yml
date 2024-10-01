@@ -1,4 +1,4 @@
-name: Deploy
+name: Build and Deploy React App
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: Build on Windows
-    runs-on: windows-latest # Use Windows runner
+    runs-on: windows-latest
 
     steps:
       - name: Checkout repo
@@ -29,12 +29,12 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: production-files
-          path: ./dist
+          path: ./build # React build output is in ./build, not ./dist
 
   deploy:
-    name: Deploy on Windows
+    name: Deploy to GitHub Pages
     needs: build
-    runs-on: windows-latest # Use Windows runner
+    runs-on: windows-latest
     if: github.ref == 'refs/heads/main'
 
     steps:
@@ -42,10 +42,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: production-files
-          path: ./dist
+          path: ./build # Use build instead of dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./build # Publish the correct build directory
