@@ -182,6 +182,8 @@ const Navbar = () => {
             marginButton:"20;",
             cursor:"pointer",
             background: "transparent",
+            outline:"none",
+            border:"none",
           }}>
           <FaProductHunt size="3rem"/><Span>Portfolio</Span>
         </button>
