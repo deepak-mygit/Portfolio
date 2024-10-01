@@ -174,7 +174,7 @@ const Navbar = () => {
     <Nav>
       <NavbarContainer>
         <NavLogo to="/">
-        <a href='#'
+        <a
           style={{
             display:"flex",
             alignItems:"center",
