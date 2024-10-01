@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link as LinkR } from "react-router-dom";
 import styled from 'styled-components';
-import {DiCssdeck} from "react-icons/di";
 import { FaProductHunt } from "react-icons/fa";
 import {FaBars} from "react-icons/fa";
 import { useTheme } from 'styled-components';
@@ -175,7 +174,7 @@ const Navbar = () => {
     <Nav>
       <NavbarContainer>
         <NavLogo to="/">
-        <a
+        <a href='#'
           style={{
             display:"flex",
             alignItems:"center",

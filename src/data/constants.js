@@ -1,4 +1,3 @@
-import logo from '../images/cimage_logo.jpeg';
 export const Bio = {
   name: "Deepak Kumar",
   roles: [
