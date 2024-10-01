@@ -174,7 +174,7 @@ const Navbar = () => {
     <Nav>
       <NavbarContainer>
         <NavLogo to="/">
-        <a
+        <button
           style={{
             display:"flex",
             alignItems:"center",
@@ -183,7 +183,7 @@ const Navbar = () => {
             cursor:"pointer",
           }}>
           <FaProductHunt size="3rem"/><Span>Portfolio</Span>
-        </a>
+        </button>
         </NavLogo>
         <MobileIcon>
           <FaBars 
