@@ -39,8 +39,7 @@
     ],
     "rules": {
       "no-unused-vars":"warn",
-      "eqeqeq":"off",
-      "jsx-a11y/anchor-is-valid": "warn"
+      "eqeqeq":"off"
     }
   },
   "browserslist": {
