@@ -1,4 +1,4 @@
-![Project Image 1](https://deepak-mygit.github.io/images/Screenshot%20(133).png)
+![Project Image 1][(https://deepak-mygit.github.io/images/Screenshot%20(133).png)(https://deepak-mygit.github.io/images/Screenshot%20(133).png)]
 #Deployment:
 ##01. Create a vite react app
 npm create vite@latest
