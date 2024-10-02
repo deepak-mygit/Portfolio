@@ -1,5 +1,8 @@
-![Project Image 1](https://deepak-mygit.github.io/images/Screenshot%20(133).png)
-![Project Image 2](https://deepak-mygit.github.io/images/Screenshot%20(134).png)
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://deepak-mygit.github.io/images/Screenshot%20(133).png" alt="Project Image 1" width="45%">
+  <img src="https://deepak-mygit.github.io/images/Screenshot%20(134).png" alt="Project Image 2" width="45%">
+</div>
+
 
 #Deployment:
 ##01. Create a vite react app
