@@ -6,7 +6,7 @@ npm create vite@latest
 base: "/[REPO_NAME]/";
 ----------------------------------------------------------------------------------------------------------------
 ##03. Create ./github/workflows/deploy.yml and add the code bellow
-
+```
 name: Deploy
 
 on:
@@ -58,17 +58,17 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-
+```
 -------------------------------------------------------------------------------------------------------------------------------
 ##04. Create a new repository on GitHub and initialize GIT
-
+```
 git init
 git add .
 git commit -m "add: initial files"
 git branch -M main
 git remote add origin https://github.com/[USER]/[REPO_NAME]
 git push -u origin main
-
+```
 -----------------------------------------------------------------------------------------------------------------------------
 ##05. Active workflow
 
@@ -77,10 +77,10 @@ Actions -> failed deploy -> re-run-job failed jobs
 Config -> Pages -> gh-pages -> save
 
 -----------------------------------------------------------------------------------------------------------------------------
-##React Router:
+#React Router:
 
-01. Install React Router
-npm i react-router-dom
+##01. Install React Router
+```npm i react-router-dom```
 
 -----------------------------------------------------------------------------------------------------------------------------
 
@@ -92,6 +92,7 @@ src
 ------------------------------------------------------------------------------------------------------------------------------
 
 ##03. Configuring the routing on main.tsx
+```
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home } from "./pages/Home.tsx";
 import { Contact } from "./pages/Contact.tsx";
@@ -118,10 +119,10 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-
+```
 ------------------------------------------------------------------------------------------------------------------------------
 ##04. Configuring the routing on App.tsx
-
+```
 import { Link, Outlet } from "react-router-dom";
 
 export default function App() {
@@ -141,18 +142,18 @@ export default function App() {
     </>
   );
 }
-
+```
 -----------------------------------------------------------------------------------------------------------------------------------
 ##05. Specify the homepage in package.json
-
+```
 {
   "homepage": "[PROJECT_URL]"
 }
-
+```
 ------------------------------------------------------------------------------------------------------------------------------------
 
 ##06. Create the 404.html file in the public folder
-
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -180,10 +181,10 @@ export default function App() {
   </head>
   <body></body>
 </html>
-
+```
 ----------------------------------------------------------------------------------------------------------------------------------
 ##07. Add the script below inside the head tag in index.html
-
+```
 <script type="text/javascript">
   (function (l) {
     if (l.search[1] === "/") {
@@ -198,7 +199,7 @@ export default function App() {
     }
   })(window.location);
 </script>
-
+```
 ----------------------------------------------------------------------------------------------------------------------------------
 ##08. Push
 
